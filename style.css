@@ -1,0 +1,14 @@
+body {
+    background-color: #f1eeed;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    justify-content: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.container {
+    display: flex;
+}
