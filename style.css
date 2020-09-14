@@ -25,3 +25,7 @@ h3 {
     background-color: #d4c2a1;
     color: white;
   }
+
+  .hideme{
+    display: none;
+    }
