@@ -11,4 +11,7 @@ let inputTest = localStorage['objectToPass'];
       document.getElementById("container").innerHTML= inputTest;
      
       
-
+post.addEventListener( 'click', function ( e ) {
+      addNote( card, inputValue.value );
+      inputTest.value = '';
+      } );
