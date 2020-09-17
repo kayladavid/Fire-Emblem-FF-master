@@ -1,31 +1,74 @@
 // console.log ('Hello world');
-const name = document.getElementById('uname');
+
+const submit = document.querySelector('.comment-submit');
+const commentList = document.querySelector('.card');
+const storyInput = document.querySelector('.input');
+
+function template(data) {
+  commentList.insertAdjacentHTML("beforeend", `
+  <p class="story-body">${data.comment}</p>`);
+}
+
+function appendComment (event) {
+
+  const data = {
+    comment: storyInput.value,
+  };
+
+  event.preventDefault();
+
+  if (storyInput.value.length < 1) return;
+
+
+  template(data);
+
+
+  storyInput.value = "";
+
+
+  localStorage.setItem('storyListing', commentList.innerHTML);
+}
+
+submit.addEventListener('click', appendComment, false)
+
+
+const saved = localStorage.getItem('storyListing');
+
+if (saved) {
+	commentList.innerHTML = saved;
+}
+
+
+/* const name = document.getElementById('uname');
 const title = document.getElementById('title');
 const inputTest = document.getElementById('story');
+const container = document.getElementById('container');
 // const btnInsert = document.getElementById('buttonId');
 
-/* btnInsert.onclick = () => {
+btnInsert.onclick = () => {
   localStorage.setItem('nameToPass', name.value);
   localStorage.setItem('titleToPass', title.value);
   localStorage.setItem( 'objectToPass', inputTest.value);
 }; */
 
-document.getElementById('buttonId').addEventListener('click',saveStories);  //Button Click Listener.
+/*
+
+document.getElementById('buttonId').addEventListener('click', saveStories);  //Button Click Listener.
 
 function saveStories() {
-  let str = JSON.stringify(name, title, inputTest);
+  let str = name;
   localStorage.setItem('objectToPass', str);
 }
 
 function getStories() {
   let pass = localStorage.getItem('objectToPass');
   localStorage.removeItem ( 'objectToPass' );
-  document.getElementById("container").innerHTML = JSON.parse(pass);
+  document.getElementById("head").innerHTML = pass;
 }
 
 getStories();
 
-/* function store_data(){ // Store value from input field to local store
+function store_data(){ // Store value from input field to local store
     localStorage.setItem('nameToPass', name.value);
     localStorage.setItem('titleToPass', title.value);
     localStorage.setItem( 'objectToPass', inputTest.value);

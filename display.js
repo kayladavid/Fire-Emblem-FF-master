@@ -1,9 +1,3 @@
-/* let nameHere = localStorage['nameToPass'];
-let headHere = localStorage['titleToPass'];
-let inputTest = localStorage['objectToPass']; */
-
-
-
 /* let nameToStore = localStorage.getItem( 'nameToPass' );
 let headingToStore = localStorage.getItem( 'titleToPass' );
 let inputToStore = localStorage.getItem( 'objectToPass' );
