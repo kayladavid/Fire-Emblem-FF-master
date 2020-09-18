@@ -18,7 +18,7 @@ function template(data) {
 const currentDate = new Date();
 
 const date = currentDate.getDate();
-const month = currentDate.getMonth(); //Be careful! January is 0 not 1
+const month = currentDate.getMonth();
 const year = currentDate.getFullYear();
 
 const dateString = date + "-" +(month + 1) + "-" + year;
@@ -51,43 +51,3 @@ const saved = localStorage.getItem('storyListing');
 if (saved) {
 	commentList.innerHTML = saved;
 }
-
-
-/* const name = document.getElementById('uname');
-const title = document.getElementById('title');
-const inputTest = document.getElementById('story');
-const container = document.getElementById('container');
-// const btnInsert = document.getElementById('buttonId');
-
-btnInsert.onclick = () => {
-  localStorage.setItem('nameToPass', name.value);
-  localStorage.setItem('titleToPass', title.value);
-  localStorage.setItem( 'objectToPass', inputTest.value);
-}; */
-
-/*
-
-document.getElementById('buttonId').addEventListener('click', saveStories);  //Button Click Listener.
-
-function saveStories() {
-  let str = name;
-  localStorage.setItem('objectToPass', str);
-}
-
-function getStories() {
-  let pass = localStorage.getItem('objectToPass');
-  localStorage.removeItem ( 'objectToPass' );
-  document.getElementById("head").innerHTML = pass;
-}
-
-getStories();
-
-function store_data(){ // Store value from input field to local store
-    localStorage.setItem('nameToPass', name.value);
-    localStorage.setItem('titleToPass', title.value);
-    localStorage.setItem( 'objectToPass', inputTest.value);
-
-}; */
-
-// save data each time to a new card, open a new page when clicking story, responsive.
-
