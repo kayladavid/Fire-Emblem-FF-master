@@ -21,7 +21,7 @@ const date = currentDate.getDate();
 const month = currentDate.getMonth();
 const year = currentDate.getFullYear();
 
-const dateString = date + "-" +(month + 1) + "-" + year;
+const dateString = +(month + 1) + "-" + date + "-" + year;
 
 function appendComment (event) {
 

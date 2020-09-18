@@ -3,9 +3,22 @@ body {
     text-align: center;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 h3 {
     text-align: center;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
 }
 
 .comment-submit {
